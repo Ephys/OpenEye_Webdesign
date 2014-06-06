@@ -1,0 +1,154 @@
+@font-face {
+	font-family: 'Aller';
+	src: url('../font/Aller/Aller_Lt.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Aller';
+	src: url('../font/Aller/Aller_LtIt.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Aller';
+	src: url('../font/Aller/Aller_Rg.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Aller';
+	src: url('../font/Aller/Aller_It.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+h1 {
+	margin: 0;
+	padding: 25px 15px;
+	font-weight: normal;
+	text-align: right;
+	font-size: 40px;
+}
+
+h2 {
+	margin: 0;
+	font-weight: normal;
+	font-size: 30px;
+	text-align: left;
+	padding: 15px 50px 10px 10px;
+}
+
+h3 {
+	font-weight: normal;
+	font-size: 20px;
+	margin: 0;
+	padding: 15px 15px 5px 25px;
+}
+
+h4 {
+	font-weight: normal;
+	font-size: 18px;
+	margin: 0;
+	padding: 10px 5px 5px 25px;
+	line-height: 28px;
+}
+
+p, q, blockquote {
+	margin: 0;
+	line-height: 170%;
+	padding: 7.5px 15px;
+	letter-spacing: 1px;
+
+	text-align: justify;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0 10px 10px 10px;
+
+	li {
+		padding: 4px 10px;
+		line-height: 25px;
+	}
+}
+
+main > ul li::before {
+	content: '♢ ';
+}
+
+form {
+	fieldset {
+		padding: 10px;
+		margin: 0 10px;
+		border: none;
+		border-top: 2px rgb(221, 221, 221) solid;
+	}
+
+	legend {
+		padding: 5px 15px;
+	}
+
+	input, button, select, textarea {
+		padding: 8px 15px;
+		margin: 5px;
+
+		border: none;
+
+		background-color: transparent;
+
+		display: inline-block;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+
+		border-bottom: 2px rgb(231, 76, 60) solid;
+
+		&:disabled {
+			border-bottom: 2px rgb(145, 145, 145) solid;
+		}
+	}
+
+	textarea {
+		min-height: 150px;
+		max-width: 100%;
+	}
+
+	select:-moz-focusring {
+		color: transparent;
+		text-shadow: 0 0 0 #000;
+	}
+}
+
+table {
+	margin: 0 auto;
+
+	th {
+		border-bottom: 2px rgb(198, 198, 198) solid;
+	}
+
+	th, td {
+		padding: 5px 15px;
+	}
+
+	tr:not(:first-of-type) {
+		&:nth-of-type(2n) {
+			background-color: rgba(198, 198, 198, 0.5);
+		}
+
+		&:nth-of-type(2n+1) {
+			background-color: rgba(250,250,250,0.5);
+		}
+	}
+}

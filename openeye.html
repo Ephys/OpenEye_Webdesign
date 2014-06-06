@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>OpenEye</title>
+	<meta charset="utf-8" />
+	<link href="assets/img/favicon.gif" type="image/gif" rel="icon" />
+	<link href="assets/stylesheet/main.css" type="text/css" media="all" rel="stylesheet" />
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<!-- commenting out the whitespace -->
+				<li><a href="openeye.html">OpenEye <img src="assets/img/download_icon.png" alt="download" title="download" /></a></li><!--
+				--><li><a href="index.html">Mods</a></li><!--
+				--><li><a href="crashList.html">Crashes</a></li><!--
+				--><li><a href="data.html">Data</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h1>About OpenEye</h1>
+		<p>Our primary aim is to collect and share vital information to allow us to provide a set of tools to the community to make the experience easier, drama-free and more secure for both users and modders.</p>
+		<p>We want to make it clear from the very start that we do this in a completely transparent way - our data is open to anyone and our code is open source. We do not track users or keep any identifying information, and people are very welcome to confirm that for themselves by browsing the code or the regular data dumps that we will provide.</p>
+
+		<h2>Downloads</h2>
+		<div id="downloadLinks">
+			<a href="https://dl.dropboxusercontent.com/u/4295615/OpenEye-0.4-1.6.4.jar" class="download">
+				<span>OpenEye 0.4 for 1.6.4</span>
+			</a>
+			<a href="https://dl.dropboxusercontent.com/u/4295615/OpenEye-0.4-1.7.2.jar" class="download">
+				<span>OpenEye 0.4 for 1.7.2</span>
+			</a>
+			<p>To install OpenEye simply drop it into your /mods/ folder.</p>
+		</div>
+
+		<h2>Quick overview</h2>
+		<h3>Snooper Settings</h3>
+		<p>First things first, our mod fully respects a user's snooper settings that are built into Minecraft - so if you don't like it, simply turn it off. However, be aware that turning it off in snooper settings means information we'd need in order to help you would not be available to us.</p>
+		<p>You can safely can remove the mod without any side effects. You can also use config options to control what data is sent to the server, and ignore messages received back from the server.</p>
+
+		<h3>Analytics</h3>
+		<p>When the game launches we collect very minimal, state-free and anonymous information about the mods being run. This includes a list of 'file signatures' (i.e. filename and hash of mod files), signatures of files that have been added or removed, timezone, locale, language and information about which Forge and Minecraft you're running. We only collect information about mods present, not how they are running or how they're configured.</p>
+		<p>This data is stored in our database for one hour, at which point it is aggregated into hourly stats and then wiped. After 1 hour, we have no information about individual requests at all.</p>
+		<p>If the mod sends up a file signature that our database doesn't know about, it will request additional information about the file. The client will then send 'mod metadata' (authors, description.etc.) back to the server, as well as a list of packages contained within the file.</p>
+		<p>We also support adding of 'tags', which are also aggregated once an hour.</p>
+
+		<div class="info">
+			<h4>For users and mod packs</h4>
+			<p>Users can add 'tags' into OpenEye configuration files.</p>
+		</div>
+
+		<div class="info">
+			<h4>For launchers</h4>
+			<p>Tags can be added by writing comma separated list to:</p>
+			<ul>
+				<li>"openeye.tags" command line parameter</li>
+				<li>"openeye.tags" environment variable</li>
+			</ul>
+		</div>
+		<p>Want more information about what analytics data is stored? Read our <a href="storage-policy.html">storage policy</a>.</p>
+
+		<h3>Crashes</h3>
+		<p>When you relaunch the game after a crash, a crash report is sent to the server. If the crash was already reported and the site contains additional data (like information about a fix), a small icon will appear in your game with any additional information it knows about the crash (which will usually be supplied by mod authors), along with a button to launch a webpage with more information. This page will display the crash details and try to work out which mods and files may have been involved in the crash.</p>
+		<p>The crash is reported in #OpenEye IRC channel (on EsperNet), and mod authors can leave a small note against a crash via an IRC bot. At mod author's request, we can also make the bot report your crashes directly to your IRC channel if you'd like.</p>
+
+		<h3>File notes & user security</h3>
+		<p>To make things as unobtrusive as possible all notes are displayed in a single place, accessible via a small icon on the main menu.</p>
+		<p>Another type of note is a "dangerous file" note. Nobody has access to this - it's strictly reserved for something that has been confirmed to have a virus, key logger or anything that is truly dangerous to a user. If this is ever used it'd first be discussed with all parts of the community first. This is NOT something that will be used in mod or modpack drama - we're not going to get involved in anything to do with redistribution, user tracking, modified jars or anything else. It's there to alert a user if there is a REAL security risk from a dodgy file floating around on the search engines or similar. An example would be an altered mod which also contains code to install a virus or a keylogger onto your system outside of Minecraft. As of yet, I'm not aware of any situation in the history of modded Minecraft that would warrant us using this, and I hope there never will.</p>
+		<p>Having said all that, it's just a warning message that gets displayed to users like any other note in the system. If you want to increase your security we have a config setting that'll bring up a full page screen and stop you from proceeding, however that's disabled by default. Be warned that this is only a thin layer of security - if someone was intent on causing harm I imagine they'd be able to add code to bypass our system quite easily, but some security is better than none.</p>
+		<p><a href="configuration.html">Learn how to configure OpenEye</a></p>
+
+		<h2>Apart from the mod</h2>
+		<h3>IRC</h3>
+		<p>On the EsperNet IRC network, in #OpenEye we have an IRC bot that can let you search for information about mods and let mod authors update information about their mods. The IRC bot will also tell users in real-time about any new crashes that have entered into the system and any new mods detected.</p>
+
+		<h3>Our data & our code</h3>
+		<p>As mentioned, this project is 100% open. Anyone is welcome to browse the source code and find out how data is handled or browse the daily data dumps to see what data is stored. We are very open to making this data available to other systems that might find it useful; whether that be something like NEM, or any of the launchers out there.</p>
+
+		<h3>A message to modpacks / Permissions</h3>
+		<p>Yeah of course you have permission. Permissions are silly. Do what you like - however, if you've got a HUGE mod pack, we'd really appreciate a heads-up first so we can keep an eye on the servers.</p>
+
+		<h3>A message to modders and launchers</h3>
+		<p>We really hope that you'll embrace this project and see the value in it. We're very open to suggestions, so please don't hesitate to get in contact with us and we'll do our best to accommodate you or answer any questions.</p>
+		<p>We think this tool may be useful to the community (both users and modders). That's why we want this project to succeed. Please, discuss with us any issues you see and don't jump to quick conclusions.</p>
+	</main>
+	<div id="creeperhost">
+		<a target="_blank" href="http://www.creeperhost.net"><img src="http://openeye.openmods.info/creeperhost.png"></a>
+	</div>
+	<footer>
+		<aside>
+			<p>
+				<a target="_blank" href="http://openmods.info/" title="Website">OpenMods Website</a><br />
+				<a target="_blank" href="https://github.com/openmods" title="GitHub">OpenMods GitHub</a><br />
+				<a target="_blank" href="http://www.openmods.info:8080/" title="Jenkins">OpenMods Jenkins</a><br />
+				<a target="_blank" href="http://www.patreon.com/openmods" title="Patreon">OpenMods Patreon</a>
+			</p>
+		</aside>
+		<aside>
+			<h2>Social Media</h2>
+			<a target="_blank" href="https://twitter.com/OpenMods"><img src="assets/img/social/twitter.png"></a>
+			<a target="_blank" href="https://www.youtube.com/user/Mikeemoo1000"><img src="assets/img/social/youtube.png"></a>
+		</aside>
+	</footer>
+</body>
+</html>
