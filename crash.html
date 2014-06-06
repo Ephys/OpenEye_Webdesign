@@ -19,117 +19,78 @@
 		</nav>
 	</header>
 	<main>
-		<h1>Find a crash</h1>
+		<h1>Crash report</h1>
+		<h2>java.lang.NullPointerException <small>235 reports</small></h2>
 
-	    <form class="info" autocomplete="off">
-		    <div class="floatlabel third">
-				<label for="form_mod">Mod</label>
-				<input id="form_mod" name="form[mod]" type="text">
-			</div>
-			<div class="floatlabel third">
-			    <label for="form_version">Mod version</label>
-			    <input disabled id="form_version" name="form[version]" type="text">
-			</div>
-		    <div class="floatlabel third">
-			    <label for="form_tag">Tag</label>
-                <input id="form_tag" name="form[tag]" type="text">
-			</div>
-
-		    <div class="floatlabel">
-                <label for="form_signature">File signature</label>
-                <input id="form_signature" name="form[signature]" type="text">
-			</div>
-		    <div class="floatlabel">
-			    <label for="form_package">Package</label>
-			    <input id="form_package" name="form[package]" type="text">
-			</div>
-
-		    <button type="submit">Search</button>
-		</form>
-
-		<table>
-			<tr>
-				<th>Date</th>
-				<th>Exception</th>
-				<th>Note</th>
-				<th>Reports</th>
-			</tr>
-			<tr>
-				<td>2014-05-18 20:04:50</td>
-				<td>
-					<p><a href="/crashes/fc1028bc4ebec7d4e38309f7c7ff044a">java.lang.NullPointerException</a>
-					<br>net.minecraft.item.ItemStack.func_77954_c():142</p>
-					<ul class="tags">
-						<li>RR 2-DEV-142</li>
-						<li>RR 2.8.4.1</li>
-						<li class="mod">codechicken</li>
-					</ul>
-				</td>
-				<td></td>
-				<td>485</td>
-			</tr>
-			<tr>
-				<td>2014-05-18 20:04:50</td>
-				<td>
-					<p><a href="/crashes/fc1028bc4ebec7d4e38309f7c7ff044a">java.lang.NullPointerException</a>
-					<br>net.minecraft.item.ItemStack.func_77954_c():142</p>
-					<ul class="tags">
-						<li>RR 2-DEV-142</li>
-						<li>RR 2.8.4.1</li>
-						<li>RR 2.8.4.1</li>
-						<li>RR 2.8.4.1</li>
-						<li>RR 2.8.4.1</li>
-						<li>RR 2.8.4.1</li>
-						<li class="mod">codechicken</li>
-					</ul>
-				</td>
-				<td></td>
-				<td>485</td>
-			</tr>
-			<tr>
-				<td>2014-05-18 20:04:50</td>
-				<td>
-					<p><a href="/crashes/fc1028bc4ebec7d4e38309f7c7ff044a">java.lang.NullPointerException</a>
-					<br>net.minecraft.item.ItemStack.func_77954_c():142</p>
-					<ul class="tags">
-						<li>RR 2-DEV-142</li>
-						<li>RR 2.8.4.1</li>
-						<li class="mod">codechicken</li>
-					</ul>
-				</td>
-				<td></td>
-				<td>485</td>
-			</tr>
-			<tr>
-			<td>2014-05-18 20:04:50</td>
-			<td>
-				<p><a href="/crashes/fc1028bc4ebec7d4e38309f7c7ff044a">java.lang.NullPointerException</a>
-				<br>net.minecraft.item.ItemStack.func_77954_c():142</p>
-				<ul class="tags">
-					<li>RR 2-DEV-142</li>
-					<li>RR 2.8.4.1</li>
-					<li class="mod">codechicken</li>
-				</ul>
-			</td>
-			<td></td>
-			<td>485</td>
-		</tr>
-		</table>
-
-		<ul class="pages">
-			<li class="selected">1</li>
-			<li><a href="">2</a></li>
-			<li><a href="">3</a></li>
-			<li><a href="">4</a></li>
-			<li><a href="">5</a></li>
-			<li><a href="">6</a></li>
-			<li class="empty">...</li>
-			<li><a href="">19</a></li>
-			<li><a href="">20</a></li>
-			<li><a href="">21</a></li>
-			<li><a href="">22</a></li>
-			<li><a href="">23</a></li>
+		<ul class="tags">
+			<li>RR 2-DEV-142</li>
+			<li>RR 2.8.4.1</li>
+			<li class="mod">codechicken</li>
+			<li class="green">crash_handler</li>
 		</ul>
+
+		<pre>java.lang.NullPointerException:
+    at codechicken.lib.world.WorldExtensionManager.preTick(WorldExtensionManager.java:239)
+    at codechicken.lib.world.WorldExtensionManager.access$400(WorldExtensionManager.java:25)
+    at codechicken.lib.world.WorldExtensionManager$WorldExtensionServerTickHandler.tickStart(WorldExtensionManager.java:160)
+    at cpw.mods.fml.common.SingleIntervalHandler.tickStart(SingleIntervalHandler.java:28)
+    at cpw.mods.fml.common.FMLCommonHandler.tickStart(FMLCommonHandler.java:122)
+    at cpw.mods.fml.common.FMLCommonHandler.onPreWorldTick(FMLCommonHandler.java:295)
+    at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:652)
+    at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:587)
+    at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:129)
+    at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+    at net.minecraft.server.ThreadMinecraftServer.run(SourceFile:583)</pre>
+		<h3>System details</h3>
+		<div class="info">
+		</div>
+
+		<h3>Modpack details</h3>
+		<div class="info">
+			<h3>Likely involved mods</h3>
+			<ul class="split col2">
+				<li>Note to devs: don't show one of these sections if it's empty</li>
+			</ul>
+
+			<h3>Likely involved files</h3>
+			<ul class="split col2">
+				<li><a href="">CodeChickenLib-1.7.2-1.1.1.80-universal.jar</a></li>
+			    <li><a href="">CodeChickenLib-universal-1.6.4-1.0.0.61.jar</a></li>
+			    <li><a href="">CodeChickenLib-universal-1.6.4-1.0.0.62.jar</a></li>
+			</ul>
+
+
+			<h3>Mods that have been installed during every crash</h3>
+			<ul class="split col3">
+				<li>Forge Mod Loader</li>
+				<li>Minecraft Forge</li>
+				<li>Forge Microblocks</li>
+				<li>Forge Multipart</li>
+				<li>Minecraft Multipart Plugin</li>
+				<li>OpenEye</li>
+			</ul>
+
+			<h3>Files that have been installed during every crash</h3>
+			<ul class="split col3">
+				<li>lzma-0.0.1.jar</li>
+				<li>gson-2.2.2.jar</li>
+				<li>librarylwjglopenal-20100824.jar</li>
+				<li>commons-lang3-3.1.jar</li>
+				<li>asm-all-4.1.jar</li>
+				<li>soundsystem-20120107.jar</li>
+				<li>libraryjavasound-20101123.jar</li>
+				<li>jopt-simple-4.5.jar</li>
+				<li>codecjorbis-20101023.jar</li>
+				<li>minecraftforge-9.11.1.965.jar</li>
+				<li>argo-2.25_fixed.jar</li>
+				<li>jinput-2.0.5.jar</li>
+				<li>bcprov-jdk15on-1.47.jar</li>
+				<li>codecwav-20101023.jar</li>
+				<li>guava-14.0.jar</li>
+				<li>jutils-1.0.0.jar</li>
+				<li>commons-io-2.4.jar</li>
+			</ul>
+		</div>
 	</main>
 	<div id="creeperhost">
 		<a target="_blank" href="http://www.creeperhost.net"><img src="http://openeye.openmods.info/creeperhost.png"></a>

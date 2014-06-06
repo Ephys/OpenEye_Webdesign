@@ -112,6 +112,12 @@ ul.tags li {
 ul.tags li.mod {
   background-color: #2a5ca5;
 }
+ul.tags li.green {
+  background-color: #4aba4c;
+}
+ul.tags li::before {
+  content: '';
+}
 form {
   padding: 10px 0;
   border-bottom: 1px #dddddd solid;
@@ -213,10 +219,21 @@ footer aside img {
   padding: 7.5px 15px;
   letter-spacing: 1px;
 }
-.info {
+.info,
+pre {
   margin: 20px;
   border-left: 2px #2a5ca5 solid;
   background-color: rgba(0, 0, 0, 0.05);
+}
+pre {
+  padding: 10px;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: normal;
+  overflow: auto;
+  white-space: pre;
+  word-break: normal;
+  word-wrap: normal;
 }
 form.info {
   padding: 20px;
